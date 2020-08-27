@@ -1,0 +1,250 @@
+@import "./mixin.scss";
+@import "./base.scss";
+.title {
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .title__name {
+    font-family: "Raleway";
+    line-height: 1.2em;
+    font-size: 17px;
+  }
+}
+
+.baner-section {
+  display: flex;
+  width: 100%;
+  @include adapt(600px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .baner__cake {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    height: 690px;
+    width: 33.33%;
+    @include adapt(600px) {
+      width: 100%;
+      height: 306px;
+    }
+    &:first-child {
+      background-image: url("https://static.wixstatic.com/media/e1c78c_2b251c8e958e4c798589ec994a25b446~mv2_d_1800_2424_s_2.jpg/v1/fill/w_357,h_620,al_c,q_80,usm_0.66_1.00_0.01/e1c78c_2b251c8e958e4c798589ec994a25b446~mv2_d_1800_2424_s_2.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 40%;
+    }
+    &:nth-child(2) {
+      background-color: rgb(247 233 228);
+      margin: 0 20px 0 20px;
+      @include adapt(600px) {
+        margin: 15px 0 15px 0;
+      }
+    }
+    &:nth-last-child(1) {
+      background-image: url("https://static.wixstatic.com/media/e1c78c_c1bbc677e5ad4ee8849ce097f0007901~mv2_d_1200_1616_s_2.jpg/v1/fill/w_594,h_620,al_c,q_85,usm_0.66_1.00_0.01/e1c78c_c1bbc677e5ad4ee8849ce097f0007901~mv2_d_1200_1616_s_2.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 40%;
+    }
+  }
+  .baner__back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .baner__name {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    .baner__description {
+      font-size: 32px;
+
+      @include adapt(600px) {
+        font-size: 22px;
+      }
+    }
+  }
+  .baner__btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 160px;
+    height: 50px;
+    border: solid 2px rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%);
+    transition: border-color 0.4s ease 0s;
+    &:hover {
+      border: solid 2px black;
+      transition: border-color 0.4s ease 0s;
+    }
+    @include adapt(600px) {
+      width: 160px;
+      height: 42px;
+    }
+  }
+  .baner__order {
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.baner-style {
+  margin-top: 15px;
+  width: 100%;
+  height: 120px;
+  background-color: lightslategray;
+
+  .baner__text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway";
+    font-size: 22px;
+    font-weight: bold;
+    @include adapt(600px) {
+      letter-spacing: 0.1em;
+      line-height: 1.4em;
+      text-align: center;
+      font-size: 17px;
+    }
+  }
+}
+
+.contact-section {
+  margin-top: 15px;
+  width: 100%;
+  height: 435px;
+  display: flex;
+  @include adapt(600px) {
+    flex-direction: column;
+  }
+  .contact__baner {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    @include adapt(600px) {
+      width: 100%;
+      height: 100%;
+    }
+    &:first-child {
+      background-image: url("https://static.wixstatic.com/media/e1c78c_d5f27255657d452cb413ba28ef3bb976~mv2.jpg/v1/fill/w_776,h_392,al_c,q_80,usm_0.66_1.00_0.01/e1c78c_d5f27255657d452cb413ba28ef3bb976~mv2.webp");
+      background-size: cover;
+      background-position: center;
+      margin-right: 7.5px;
+      @include adapt(600px) {
+        margin: 0;
+      }
+    }
+    &:nth-last-child(1) {
+      margin-left: 7.5px;
+      background-image: url("https://static.wixstatic.com/media/2e2a49_484505d397e54215b428ec407ff1a872~mv2.jpg/v1/fill/w_776,h_392,al_c,q_80,usm_0.66_1.00_0.01/2e2a49_484505d397e54215b428ec407ff1a872~mv2.webp");
+      background-size: cover;
+      background-position: center;
+      @include adapt(600px) {
+        margin: 15px 0 0 0;
+      }
+    }
+    .contact__btn {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 80%;
+      right: 6%;
+      width: 160px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 1);
+      border: solid rgba(255, 255, 255, 1) 2px;
+      cursor: pointer;
+      transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+      &:hover {
+        border: solid #292325 2px;
+        transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+      }
+      @include adapt(600px) {
+        top: 80%;
+        right: 8%;
+        transform: translate(-50%, -50%);
+
+        height: 42px;
+      }
+    }
+    .contact__text {
+      font: normal normal 700 16px/1.4em raleway, sans-serif;
+      transition: color 0.4s ease 0s;
+      color: #292325;
+    }
+  }
+}
+//footer
+.subscribe {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .subscribe__title {
+    margin: 100px 0 30px 0;
+
+    .subscribe__title__text {
+      font: normal normal bold 16px/1.4em raleway, sans-serif;
+      color: #292325;
+    }
+  }
+
+  .subscribe__email {
+    margin-bottom: 10px;
+    .subscribe__email__input {
+      width: 340px;
+      height: 33px;
+      padding: 3px 3px 3px 21px;
+    }
+  }
+  .subscribe__btn {
+    margin-bottom: 40px;
+    .subscribe__btn__submit {
+      width: 338px;
+      height: 33px;
+      background-color: rgba(41, 35, 37, 1);
+      border: solid rgba(254, 96, 96, 1) 0px;
+      cursor: pointer !important;
+      color: #fff;
+      font-family: "Raleway";
+      font-size: 16px;
+      font-weight: 900;
+      margin-left: 10px;
+      transition: color 0.4s;
+      &:hover {
+        background-color: rgba(153, 141, 143, 1);
+      }
+    }
+  }
+}
+
+.footer__description {
+  width: 100%;
+  height: 60px;
+  background-color: #f7e9e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .footer__description__text {
+    font: normal normal normal 13px/1.4em raleway, sans-serif;
+    color: #292325;
+  }
+}

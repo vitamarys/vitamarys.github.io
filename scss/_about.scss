@@ -1,0 +1,84 @@
+@import "./mixin.scss";
+@import "./base.scss";
+
+.about {
+  width: 100%;
+  height: calc(100vh - 418px);
+  background-color: rgb(247, 233, 228);
+  @include adapt(600px) {
+    height: 100%;
+  }
+  .page__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+      font: normal normal bold 32px/1.4em raleway, sans-serif;
+      color: #292325;
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+    &__underline {
+      height: 1px;
+      width: 33px;
+      background-color: rgba(120, 124, 128, 1);
+      margin-bottom: 15px;
+    }
+  }
+
+  .page__description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include adapt(600px) {
+      text-align: center;
+    }
+    &__text {
+      font: normal normal normal 15px/1.4em raleway, sans-serif;
+      color: #332f30;
+      font-weight: 1000;
+    }
+  }
+
+  .page__baner {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__image {
+      border: 1px solid rgb(247, 233, 228);
+      border-radius: 50%;
+    }
+  }
+
+  .page__pharagraf {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    font-family: "Raleway";
+    color: #332f30;
+    text-align: center;
+    font-weight: 500;
+    @include adapt(600px) {
+      font-weight: 600;
+      padding: 0 15px 0 15px;
+    }
+    &__top {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      width: 630px;
+      @include adapt(600px) {
+        width: 100%;
+      }
+    }
+    &__bottom {
+      width: 630px;
+      @include adapt(600px) {
+        width: 100%;
+      }
+    }
+  }
+}

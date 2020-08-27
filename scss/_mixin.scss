@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@mixin adapt($num) {
+  @media screen and (max-width: $num) {
+    @content;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
